@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | TRENDINGSPOT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .prose p { margin-bottom: 1.5rem; line-height: 1.8; color: #4b5563; font-size: 1.1rem; }
+        .reading-progress { height: 4px; background: #2563eb; position: fixed; top: 0; left: 0; z-index: 100; transition: width 0.1s; }
+        
+        /* Mobile Menu Animation */
+        #mobile-menu { transition: transform 0.3s ease-in-out; }
+        .mobile-menu-open { transform: translateX(0) !important; }
+        
+        /* Desktop Dropdown Hover */
+        .group:hover .group-hover\:block { display: block; } 
+   </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <div id="progress-bar" class="reading-progress" style="width: 0%"></div>
+
+    <nav class="bg-white border-b sticky top-0 z-50">
+        <div class="container mx-auto px-4 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <button onclick="toggleMobileMenu()" class="lg:hidden text-2xl text-slate-700">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+                <div class="text-2xl font-black italic tracking-tighter text-blue-600">
+                    TRENDING<span class="text-black">SPOT</span>
+                </div>
+            </div>
+
+            <div class="hidden lg:flex items-center space-x-8 font-bold text-sm uppercase tracking-wide text-slate-600">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <div class="relative group cursor-pointer py-4">
+                    <span class="hover:text-blue-600 flex items-center gap-1">
+                        Categories <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </span>
+                    <div class="hidden group-hover:block absolute top-full left-0 w-56 bg-white border border-slate-100 shadow-xl rounded-xl p-2 mt-0">
+                        <a href="blog-details.html" class="block px-4 py-3 hover:bg-blue-50 rounded-lg text-slate-800 transition">Tech News</a>
+                        <a href="blog-details.html" class="block px-4 py-3 hover:bg-blue-50 rounded-lg text-slate-800 transition">Life Hacks</a>
+                        <a href="blog-details.html" class="block px-4 py-3 hover:bg-blue-50 rounded-lg text-slate-800 transition">AI & Automation</a>
+                        <a href="blog-details.html" class="block px-4 py-3 hover:bg-blue-50 rounded-lg text-slate-800 transition">Future Trends</a>
+                    </div>
+                </div>
+                <a href="blog-details.html" class="hover:text-blue-600 transition">Trending</a>
+                <a href="blog-details.html" class="hover:text-blue-600 transition">Shop</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex items-center bg-slate-100 rounded-full px-4 py-2 border border-slate-200">
+                    <i class="fa-solid fa-search text-slate-400 mr-2 text-sm"></i>
+                    <input type="text" placeholder="Search stories..." class="bg-transparent outline-none text-xs w-32 focus:w-48 transition-all">
+                </div>
+                <button class="bg-black text-white px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-tighter shadow-lg shadow-slate-200">Subscribe</button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-overlay" onclick="toggleMobileMenu()" class="fixed inset-0 bg-black/50 z-[60] hidden"></div>
+    <div id="mobile-menu" class="fixed top-0 left-0 w-[80%] h-full bg-white z-[70] shadow-2xl -translate-x-full overflow-y-auto">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-8">
+                <div class="text-xl font-black italic text-blue-600">TRENDING<span class="text-black">SPOT</span></div>
+                <button onclick="toggleMobileMenu()" class="text-2xl"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="space-y-4">
+                <a href="index.html" class="block text-lg font-bold text-slate-800 border-b pb-2">Home</a>
+                <div>
+                    <button onclick="toggleMobileDropdown()" class="flex items-center justify-between w-full text-lg font-bold text-slate-800 border-b pb-2">
+                        Categories <i id="dropdown-icon" class="fa-solid fa-chevron-down text-sm transition-transform"></i>
+                    </button>
+                    <div id="mobile-dropdown-content" class="hidden pl-4 mt-3 space-y-4 border-b">
+                        <a href="blog-details.html" class="block text-slate-600 font-semibold">Tech News</a>
+                        <a href="blog-details.html" class="block text-slate-600 font-semibold">Life Hacks</a>
+                    </div>
+                </div>
+                <a href="blog-details.html" class="block text-lg font-bold text-slate-800 border-b pb-2">Trending News</a>
+                <a href="blog-details.html" class="block text-lg font-bold text-slate-800 border-b pb-2">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-4">
+                Terms of Service
+            </h1>
+            <p class="text-slate-500 font-bold uppercase tracking-widest text-sm border-b pb-6">
+                Last updated: 02/07/2026
+            </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto prose">
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">1. Acceptance of Terms</h2>
+            <p>
+                By accessing and using <strong>Blog Streamer</strong>, you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to these terms, please do not use our website.
+            </p>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">2. Use License</h2>
+            <p>Permission is granted to temporarily access the materials on <strong>Blog Streamer</strong> for personal, non-commercial viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+            <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-8">
+                <li>Modify or copy the materials</li>
+                <li>Use the materials for any commercial purpose or public display</li>
+                <li>Attempt to reverse engineer any software on Blog Streamer</li>
+                <li>Remove any copyright or proprietary notations from the materials</li>
+                <li>Transfer the materials to another person or mirror the materials on another server</li>
+            </ul>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">3. Content Disclaimer</h2>
+            <p>
+                The materials on <strong>Blog Streamer</strong> are provided on an 'as is' basis. Blog Streamer makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property.
+            </p>
+            <p>
+                Articles and content published on this website are for entertainment and informational purposes. We strive for accuracy but make no guarantees about the completeness, reliability, or accuracy of the information.
+            </p>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">4. User Conduct</h2>
+            <p>You agree not to:</p>
+            <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-8">
+                <li>Use the website for any unlawful purpose</li>
+                <li>Attempt to gain unauthorized access to our systems</li>
+                <li>Interfere with or disrupt the website or servers</li>
+                <li>Transmit viruses, malware, or other harmful code</li>
+                <li>Scrape, crawl, or collect data from the website without permission</li>
+            </ul>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">5. Intellectual Property</h2>
+            <p>
+                All content on <strong>Blog Streamer</strong>, including but not limited to text, graphics, logos, images, and software, is the property of Blog Streamer or its content suppliers and is protected by copyright and intellectual property laws.
+            </p>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">6. Links to Third-Party Sites</h2>
+            <p>
+                <strong>Blog Streamer</strong> may contain links to third-party websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites.
+            </p>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">7. Limitation of Liability</h2>
+            <p>
+                In no event shall <strong>Blog Streamer</strong> or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Blog Streamer.
+            </p>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">8. Revisions</h2>
+            <p>
+                <strong>Blog Streamer</strong> may revise these terms of service at any time without notice. By using this website, you agree to be bound by the current version of these terms.
+            </p>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">9. Governing Law</h2>
+            <p>
+                These terms and conditions are governed by and construed in accordance with applicable laws, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
+            </p>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">10. Contact Information</h2>
+            <p class="mb-8">
+                If you have any questions about these Terms of Service, please contact us at:
+            </p>
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-xl">
+                <p class="font-bold text-blue-900 mb-1">Website</p>
+                <a href="https://blogthespot.app" class="text-blue-600 font-bold hover:underline">https://blogstreamer.com</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8 mt-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="text-2xl font-black italic tracking-tighter text-blue-600 mb-6">
+                TRENDING<span class="text-black">SPOT</span>
+            </div>
+            <div class="flex justify-center space-x-6 text-gray-500 text-sm mb-6">
+                <a href="blog-details.html" class="hover:text-black transition">Privacy Policy</a>
+                <a href="blog-details.html" class="hover:text-black transition">Terms of Service</a>
+                <a href="blog-details.html" class="hover:text-black transition">Contact Us</a>
+            </div>
+            <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">© 2026 All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Reading Progress Script
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+
+        // Mobile Menu Functions
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const overlay = document.getElementById('mobile-overlay');
+            menu.classList.toggle('mobile-menu-open');
+            overlay.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        function toggleMobileDropdown() {
+            const content = document.getElementById('mobile-dropdown-content');
+            const icon = document.getElementById('dropdown-icon');
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+    </script>
+</body>
+</html>
